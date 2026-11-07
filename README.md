@@ -1,139 +1,118 @@
-# 📘 المرجع السريع لأوامر Git الأساسية
+# <p align="right">📘 المرجع السريع لأوامر Git الأساسية</p>
 
 ---
 
-## 🔷 1. الأوامر الأولية لإنشاء مشروع جديد (من الصفر)
-*تُنفذ هذه المجموعة بالترتيب **مرة واحدة فقط** عند ربط مجلدك المحلي بمستودع GitHub جديد.*
+## <p align="right">🔷 1. الأوامر الأولية لإنشاء مشروع جديد (من الصفر)</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git init</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لتهيئة المجلد الحالي كمستودع Git محلي.
+<blockquote>
+<p align="right">تُنفذ هذه المجموعة بالترتيب <b>مرة واحدة فقط</b> عند ربط مجلدك المحلي بمستودع GitHub جديد.</p>
+</blockquote>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git add .</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لتجهيز جميع ملفات المشروع الحالية لبدء تتبعها (سيقرأ ملف .gitignore تلقائياً).
+> [!NOTE]
+> ### <p align="right">📋 أمر التهيئة الأولية</p>
+> ```bash
+> git init
+> ```
+> <p align="right">💡 لتهيئة المجلد الحالي كمستودع Git محلي.</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git commit -m "Initial commit"</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لحفظ أول لقطة للمشروع في الذاكرة المحلية.
+> [!NOTE]
+> ### <p align="right">📋 أمر تجهيز الملفات</p>
+> ```bash
+> git add .
+> ```
+> <p align="right">💡 لتجهيز جميع ملفات المشروع الحالية لبدء تتبعها (سيقرأ ملف .gitignore تلقائياً).</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git branch -M main</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لتسمية الفرع الرئيسي بـ main ليتطابق مع النظام الافتراضي لـ GitHub.
+> [!NOTE]
+> ### <p align="right">📋 أمر حفظ التعديلات محلياً</p>
+> ```bash
+> git commit -m "Initial commit"
+> ```
+> <p align="right">💡 لحفظ أول لقطة للمشروع في الذاكرة المحلية.</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git remote add origin https://github.com</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لربط مجلدك المحلي برابط مستودعك على السيرفر (استبدل الرابط برابط مستودعك الخاص).
+> [!NOTE]
+> ### <p align="right">📋 أمر تسمية الفرع الرئيسي</p>
+> ```bash
+> git branch -M main
+> ```
+> <p align="right">💡 لتسمية الفرع الرئيسي بـ main ليتطابق مع النظام الافتراضي لـ GitHub.</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git push -u origin main</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لرفع الملفات أول مرة وتثبيت الفرع كافتراضي للمستقبل.
+> [!NOTE]
+> ### <p align="right">📋 أمر ربط المستودع عن بعد</p>
+> ```bash
+> git remote add origin https://github.com
+> ```
+> <p align="right">💡 لربط مجلدك المحلي برابط مستودعك على السيرفر (استبدل الرابط برابط مستودعك الخاص).</p>
+
+> [!NOTE]
+> ### <p align="right">📋 أمر الرفع الافتراضي الأول</p>
+> ```bash
+> git push -u origin main
+> ```
+> <p align="right">💡 لرفع الملفات أول مرة وتثبيت الفرع كافتراضي للمستقبل.</p>
 
 ---
 
-## 🔷 2. مقارنة الملفات ومعرفة حالة المشروع (قبل التجهيز والرفع)
-*تُاستخدم لمراقبة التعديلات والتأكد من الملفات قبل حفظها.*
+## <p align="right">🔷 2. مقارنة الملفات ومعرفة حالة المشروع (قبل التجهيز والرفع)</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git status</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 يوضح لك الملفات المعدلة، الجديدة، والتي لم يتم تتبعها بعد.
+<blockquote>
+<p align="right">تُاستخدم لمراقبة التعديلات والتأكد من الملفات قبل حفظها.</p>
+</blockquote>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git diff</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 يظهر التغييرات الدقيقة والأسطر المضافة/المحذوفة في الكود قبل عمل add.
+> [!TIP]
+> ### <p align="right">🔎 فحص حالة المستودع</p>
+> ```bash
+> git status
+> ```
+> <p align="right">💡 يوضح لك الملفات المعدلة، الجديدة، والتي لم يتم تتبعها بعد.</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git diff --staged</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لمقارنة الملفات التي عملت لها add بالفعل للتأكد منها قبل الـ Commit النهائي.
+> [!TIP]
+> ### <p align="right">🔎 فحص التعديلات الدقيقة</p>
+> ```bash
+> git diff
+> ```
+> <p align="right">💡 يظهر التغييرات الدقيقة والأسطر المضافة/المحذوفة في الكود قبل عمل add.</p>
 
----
-
-## 🔷 3. رفع ملف جديد أو ملف واحد محدث (إلى مشروع قائم)
-
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git add first-Base.txt</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لتجهيز هذا الملف تحديداً (قم بتغيير اسم الملف حسب حاجتك).
-
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git commit -m "Update specific file"</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لحفظ التعديل الخاص بهذا الملف محلياً.
-
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git push</code></td>
-    <td width="30%" align="center" bgcolor="#2ecc71"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 للرفع المباشر إلى السيرفر (يعمل مباشرة بفضل اختصار -u السابق).
+> [!TIP]
+> ### <p align="right">🔎 فحص الملفات المجهزة</p>
+> ```bash
+> git diff --staged
+> ```
+> <p align="right">💡 لمقارنة الملفات التي عملت لها add بالفعل للتأكد منها قبل الـ Commit النهائي.</p>
 
 ---
 
-## 🔷 4. أوامر التراجع وإلغاء الأخطاء (مجموعة الطوارئ)
+## <p align="right">🔷 3. رفع ملف جديد أو ملف واحد محدث (إلى مشروع قائم)</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git restore --staged first-Base.txt</code></td>
-    <td width="30%" align="center" bgcolor="#e74c3c"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 إذا عملت git add لملف بالخطأ، هذا الأمر يخرجه من التجهيز ويعيده لحالته السابقة دون حذف كودك.
+> [!TIP]
+> ### <p align="right">🚀 رفع تحديث ملف مخصص</p>
+> ```bash
+> git add first-Base.txt
+> git commit -m "Update specific file"
+> git push
+> ```
+> <p align="right">💡 خطوات متسلسلة لتجهيز وحفظ ورفع ملف معين فقط دون بقية المجلد.</p>
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git restore first-Base.txt</code></td>
-    <td width="30%" align="center" bgcolor="#e74c3c"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 ⚠️ تحذير: يقوم بإلغاء التعديلات التي كتبتها في الملف ويعيده تماماً كما كان في آخر الالتزام (Commit).
+---
 
-<table>
-  <tr>
-    <td width="70%" bgcolor="#282c34"><code>git rm --cached first-Base.txt</code></td>
-    <td width="30%" align="center" bgcolor="#e74c3c"><b>📋 قابل للنسخ</b></td>
-  </tr>
-</table>
-💡 لإزالة ملف من التتبع مع الحفاظ على الملف في جهازك (لتفعيل ملف الـ gitignore عليه).
+## <p align="right">🔷 4. أوامر التراجع وإلغاء الأخطاء (مجموعة الطوارئ)</p>
+
+> [!CAUTION]
+> ### <p align="right">⚠️ إلغاء التجهيز (Undo Add)</p>
+> ```bash
+> git restore --staged first-Base.txt
+> ```
+> <p align="right">💡 إذا عملت git add لملف بالخطأ، هذا الأمر يخرجه من التجهيز ويعيده لحالته السابقة دون حذف كودك.</p>
+
+> [!CAUTION]
+> ### <p align="right">⚠️ التراجع عن تعديلات غير محفوظة</p>
+> ```bash
+> git restore first-Base.txt
+> ```
+> <p align="right">💡 <b>تحذير:</b> يقوم بإلغاء التعديلات التي كتبتها في الملف ويعيده تماماً كما كان في آخر الالتزام (Commit).</p>
+
+> [!CAUTION]
+> ### <p align="right">⚠️ حذف ملف من تتبع المستودع</p>
+> ```bash
+> git rm --cached first-Base.txt
+> ```
+> <p align="right">💡 لإزالة ملف من التتبع مع الحفاظ على الملف في جهازك (لتفعيل ملف الـ gitignore عليه).</p>
