@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl"></html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,33 @@
     <title>الصفحة الرئيسية</title>
 </head>
 <body>
-    <h1>مرحبًا بك في موقعنا!</h1>
+    <h1 id="welcome-text">جاري التحميل...</h1>
+    <!-- بطاقة معلومات مدينة الرياض -->
+    <div class="info-card">
+        <h2>📍 عاصمة المملكة: الرياض</h2>
+        
+        <!-- قسم الطقس -->
+        <div class="weather-section">
+            <span class="icon">☀️</span>
+            <span class="temp">34°م</span>
+            <p>الطقس اليوم: صافٍ ومشمس بوجه عام</p>
+        </div>
+
+        <hr> <!-- خط فاصل أنيق -->
+
+        <!-- قسم مواقيت الصلاة -->
+        <h3>🕋 مواقيت الصلاة لليوم:</h3>
+        <ul class="prayer-list">
+            <li><strong>الفجر:</strong> 04:45 ص</li>
+            <li><strong>الظهر:</strong> 11:37 ص</li>
+            <li><strong>العصر:</strong> 02:47 م</li>
+            <li><strong>المغرب:</strong> 05:10 م</li>
+            <li><strong>العشاء:</strong> 06:40 م</li>
+        </ul>
+    </div>
+
+    <a href="https://google.com" target="_blank">انقر هنا لزيارة جوجل</a>
+
     <script src="app.js"></script>
 </body>
 </html>

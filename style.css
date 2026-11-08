@@ -1,6 +1,53 @@
-h1{
-    color: #cb0808;
+/* هذا التنسيق يطبق على الصفحة كاملة */
+body {
+    background-color: #f0f4f8; /* لون خلفية رمادي مائل للأزرق */
+    font-family: Arial, sans-serif; /* تغيير خط الصفحة لخط أوضح */
+    text-align: center; /* جعل كل النصوص في منتصف الصفحة */
+    padding-top: 50px; /* ترك مسافة من الأعلى */
 }
-body{
-    background-color: #2287da;
+
+/* هذا التنسيق يخص العنوان فقط */
+h1 {
+    color: #2c3e50; /* تغيير لون النص إلى الأزرق الداكن */
+}
+/* تنسيق البطاقة الرئيسية */
+.info-card {
+    background-color: #ffffff; /* خلفية بيضاء للبطاقة */
+    max-width: 400px; /* تحديد أقصى عرض للبطاقة */
+    margin: 30px auto; /* توسيط المربع في منتصف الصفحة وترك مسافة فوقه */
+    padding: 20px; /* مسافة داخلية لحماية النصوص من الأطراف */
+    border-radius: 12px; /* جعل حواف المربع دائرية وناعمة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف يعطي إيحاء بالبروز */
+}
+
+/* تنسيق خط العناوين الداخلية */
+.info-card h2 {
+    color: #2287da;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* تنسيق درجة الحرارة */
+.temp {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f39c12; /* لون برتقالي دافئ يناسب الشمس */
+}
+
+/* تنسيق قائمة الصلوات */
+.prayer-list {
+    list-style: none; /* إخفاء النقاط الافتراضية للقائمة */
+    padding: 0;
+}
+
+.prayer-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee; /* خط منقط خفيف بين الصلوات */
+    display: flex;
+    justify-content: space-between; /* توزيع اسم الصلاة ووقتها على الأطراف */
+}
+
+/* حذف الخط السفلي لآخر صلاة في القائمة */
+.prayer-list li:last-child {
+    border-bottom: none;
 }
