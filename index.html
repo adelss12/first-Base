@@ -10,7 +10,7 @@
     <h1 id="welcome-text">جاري التحميل...</h1>
     <!-- بطاقة معلومات مدينة الرياض -->
     <div class="info-card">
-        <h2>📍 عاصمة المملكة: الرياض</h2>
+        <h2>📍 مرحبًا بك في مدينة الرياض</h2>
         
         <!-- قسم الطقس -->
         <div class="weather-section">
@@ -31,7 +31,32 @@
             <li><strong>العشاء:</strong> 06:40 م</li>
         </ul>
     </div>
+    <!-- محول العملات -->
+<div class="currency-card">
+    <h2>💱 محول العملات</h2>
 
+    <div class="currency-row">
+        <input id="amount" type="number" placeholder="المبلغ" min="0">
+
+        <select id="fromCurrency">
+            <option value="SAR">ريال سعودي</option>
+            <option value="USD">دولار أمريكي</option>
+        </select>
+    </div>
+
+    <button id="swapButton" class="swap-button" title="عكس العملات">⇄</button>
+
+    <div class="currency-row">
+        <div id="conversionResult" class="conversion-result">
+            0.00 دولار
+        </div>
+
+        <select id="toCurrency">
+            <option value="USD">دولار أمريكي</option>
+            <option value="SAR">ريال سعودي</option>
+        </select>
+    </div>
+</div>
     <a href="https://google.com" target="_blank">انقر هنا لزيارة جوجل</a>
 
     <script src="app.js"></script>

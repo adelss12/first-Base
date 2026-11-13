@@ -51,3 +51,122 @@ h1 {
 .prayer-list li:last-child {
     border-bottom: none;
 }
+
+/* تنسيق محول العملات */
+.currency-card {
+    background-color: #ffffff;
+    max-width: 720px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.currency-card h2 {
+    color: #2287da;
+    margin-top: 0;
+}
+
+.currency-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.currency-card input,
+.currency-card select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #ccd6e0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+.conversion-result {
+    min-height: 24px;
+    padding: 14px;
+    color: #1d6f42;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    direction: rtl;
+}
+
+.swap-button {
+    display: block;
+    width: 52px;
+    height: 42px;
+    margin: 14px auto;
+    border: none;
+    border-radius: 50%;
+    background-color: #2287da;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.swap-button:hover {
+    background-color: #1769ad;
+}
+
+@media (max-width: 600px) {
+    .currency-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ضبط نهائي لمحول العملات */
+.currency-card .currency-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.currency-card .swap-button {
+    display: block;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    margin: 14px auto;
+    border: none;
+    border-radius: 50%;
+    background-color: #2287da;
+    color: white;
+    font-size: 28px;
+    line-height: 52px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.currency-card .swap-button:hover {
+    background-color: #1769ad;
+}
+
+@media (max-width: 600px) {
+    .currency-card .currency-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.currency-card {
+    width: calc(100% - 40px);
+    max-width: 650px;
+    box-sizing: border-box;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.currency-card .currency-row {
+    gap: 8px;
+}
+
+.currency-card input,
+.currency-card select {
+    padding: 11px;
+    font-size: 16px;
+}
