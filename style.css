@@ -51,3 +51,54 @@ h1 {
 .prayer-list li:last-child {
     border-bottom: none;
 }
+
+/* تنسيق محول العملات */
+.currency-card {
+    background-color: #ffffff;
+    max-width: 400px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.currency-card h2 {
+    color: #2287da;
+    margin-top: 0;
+}
+
+.currency-card input,
+.currency-card select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 7px 0;
+    border: 1px solid #ccd6e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.currency-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2287da;
+    color: white;
+    font-size: 17px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.currency-card button:hover {
+    background-color: #1769ad;
+}
+
+#conversionResult {
+    min-height: 24px;
+    margin-bottom: 0;
+    color: #1d6f42;
+    font-weight: bold;
+}
