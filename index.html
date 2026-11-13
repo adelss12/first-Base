@@ -35,27 +35,27 @@
 <div class="currency-card">
     <h2>💱 محول العملات</h2>
 
-    <input id="amount" type="number" placeholder="أدخل المبلغ" min="0">
+    <div class="currency-row">
+        <input id="amount" type="number" placeholder="المبلغ" min="0">
 
-    <select id="fromCurrency">
-        <option value="SAR">ريال سعودي</option>
-        <option value="USD">دولار أمريكي</option>
-        <option value="EUR">يورو</option>
-        <option value="AED">درهم إماراتي</option>
-        <option value="GBP">جنيه إسترليني</option>
-    </select>
+        <select id="fromCurrency">
+            <option value="SAR">ريال سعودي</option>
+            <option value="USD">دولار أمريكي</option>
+        </select>
+    </div>
 
-    <select id="toCurrency">
-        <option value="USD">دولار أمريكي</option>
-        <option value="SAR">ريال سعودي</option>
-        <option value="EUR">يورو</option>
-        <option value="AED">درهم إماراتي</option>
-        <option value="GBP">جنيه إسترليني</option>
-    </select>
+    <button id="swapButton" class="swap-button" title="عكس العملات">⇄</button>
 
-    <button id="convertButton">تحويل</button>
+    <div class="currency-row">
+        <div id="conversionResult" class="conversion-result">
+            0.00 دولار
+        </div>
 
-    <p id="conversionResult">ستظهر النتيجة هنا</p>
+        <select id="toCurrency">
+            <option value="USD">دولار أمريكي</option>
+            <option value="SAR">ريال سعودي</option>
+        </select>
+    </div>
 </div>
     <a href="https://google.com" target="_blank">انقر هنا لزيارة جوجل</a>
 
