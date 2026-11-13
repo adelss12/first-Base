@@ -118,3 +118,37 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+/* ضبط نهائي لمحول العملات */
+.currency-card .currency-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.currency-card .swap-button {
+    display: block;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    margin: 14px auto;
+    border: none;
+    border-radius: 50%;
+    background-color: #2287da;
+    color: white;
+    font-size: 28px;
+    line-height: 52px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.currency-card .swap-button:hover {
+    background-color: #1769ad;
+}
+
+@media (max-width: 600px) {
+    .currency-card .currency-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
