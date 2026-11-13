@@ -12,3 +12,43 @@ if (userName) {
     // إذا لم يكتب شيئاً، نضع ترحيباً عاماً
     welcomeElement.innerText = "أهلاً بك يا زائرنا العزيز في موقعنا! ✨";
 }
+
+const exchangeRates = {
+    USD: 1,
+    SAR: 3.75,
+    EUR: 0.92,
+    AED: 3.6725,
+    GBP: 0.79
+};
+
+const currencyNames = {
+    USD: "دولار",
+    SAR: "ريال",
+    EUR: "يورو",
+    AED: "درهم",
+    GBP: "جنيه"
+};
+
+const convertButton = document.getElementById("convertButton");
+
+if (convertButton) {
+    convertButton.addEventListener("click", function () {
+        const amount = Number(document.getElementById("amount").value);
+        const fromCurrency = document.getElementById("fromCurrency").value;
+        const toCurrency = document.getElementById("toCurrency").value;
+        const result = document.getElementById("conversionResult");
+
+        if (!amount || amount < 0) {
+            result.textContent = "أدخل مبلغًا صحيحًا أولًا";
+            return;
+        }
+
+        const convertedAmount =
+            (amount / exchangeRates[fromCurrency]) *
+            exchangeRates[toCurrency];
+
+        result.textContent =
+            `${amount} ${currencyNames[fromCurrency]} = ` +
+            `${convertedAmount.toFixed(2)} ${currencyNames[toCurrency]}`;
+    });
+}
