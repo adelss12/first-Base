@@ -15,40 +15,45 @@ if (userName) {
 
 const exchangeRates = {
     USD: 1,
-    SAR: 3.75,
-    EUR: 0.92,
-    AED: 3.6725,
-    GBP: 0.79
+    SAR: 3.75
 };
 
 const currencyNames = {
     USD: "دولار",
-    SAR: "ريال",
-    EUR: "يورو",
-    AED: "درهم",
-    GBP: "جنيه"
+    SAR: "ريال"
 };
 
-const convertButton = document.getElementById("convertButton");
+const amountInput = document.getElementById("amount");
+const fromCurrency = document.getElementById("fromCurrency");
+const toCurrency = document.getElementById("toCurrency");
+const conversionResult = document.getElementById("conversionResult");
+const swapButton = document.getElementById("swapButton");
 
-if (convertButton) {
-    convertButton.addEventListener("click", function () {
-        const amount = Number(document.getElementById("amount").value);
-        const fromCurrency = document.getElementById("fromCurrency").value;
-        const toCurrency = document.getElementById("toCurrency").value;
-        const result = document.getElementById("conversionResult");
+function convertCurrency() {
+    const amount = Number(amountInput.value);
 
-        if (!amount || amount < 0) {
-            result.textContent = "أدخل مبلغًا صحيحًا أولًا";
-            return;
-        }
+    if (!amount || amount < 0) {
+        conversionResult.textContent = "0.00";
+        return;
+    }
 
-        const convertedAmount =
-            (amount / exchangeRates[fromCurrency]) *
-            exchangeRates[toCurrency];
+    const convertedAmount =
+        (amount / exchangeRates[fromCurrency.value]) *
+        exchangeRates[toCurrency.value];
 
-        result.textContent =
-            `${amount} ${currencyNames[fromCurrency]} = ` +
-            `${convertedAmount.toFixed(2)} ${currencyNames[toCurrency]}`;
-    });
+    conversionResult.textContent =
+        `${convertedAmount.toFixed(2)} ${currencyNames[toCurrency.value]}`;
 }
+
+amountInput.addEventListener("input", convertCurrency);
+fromCurrency.addEventListener("change", convertCurrency);
+toCurrency.addEventListener("change", convertCurrency);
+
+swapButton.addEventListener("click", function () {
+    const currentFrom = fromCurrency.value;
+
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = currentFrom;
+
+    convertCurrency();
+});
