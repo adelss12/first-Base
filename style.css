@@ -152,3 +152,21 @@ h1 {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.currency-card {
+    width: calc(100% - 40px);
+    max-width: 650px;
+    box-sizing: border-box;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.currency-card .currency-row {
+    gap: 8px;
+}
+
+.currency-card input,
+.currency-card select {
+    padding: 11px;
+    font-size: 16px;
+}
