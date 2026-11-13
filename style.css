@@ -55,11 +55,11 @@ h1 {
 /* تنسيق محول العملات */
 .currency-card {
     background-color: #ffffff;
-    max-width: 400px;
+    max-width: 720px;
     margin: 25px auto;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .currency-card h2 {
@@ -67,38 +67,54 @@ h1 {
     margin-top: 0;
 }
 
+.currency-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
 .currency-card input,
 .currency-card select {
     width: 100%;
     box-sizing: border-box;
-    padding: 12px;
-    margin: 7px 0;
+    padding: 14px;
     border: 1px solid #ccd6e0;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 18px;
     font-family: inherit;
 }
 
-.currency-card button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
+.conversion-result {
+    min-height: 24px;
+    padding: 14px;
+    color: #1d6f42;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    direction: rtl;
+}
+
+.swap-button {
+    display: block;
+    width: 52px;
+    height: 42px;
+    margin: 14px auto;
     border: none;
-    border-radius: 8px;
+    border-radius: 50%;
     background-color: #2287da;
     color: white;
-    font-size: 17px;
-    font-family: inherit;
+    font-size: 28px;
+    line-height: 1;
     cursor: pointer;
 }
 
-.currency-card button:hover {
+.swap-button:hover {
     background-color: #1769ad;
 }
 
-#conversionResult {
-    min-height: 24px;
-    margin-bottom: 0;
-    color: #1d6f42;
-    font-weight: bold;
+@media (max-width: 600px) {
+    .currency-row {
+        grid-template-columns: 1fr;
+    }
 }
